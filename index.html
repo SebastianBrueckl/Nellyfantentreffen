@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video als Animation</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            height: 150vh; /* Beispielhöhe für einen langen Inhalt */
+            margin: 0;
+            padding: 0;
+        }
+
+        video {
+            display: block;
+            width: 46pc;
+            height: auto;
+            margin-top: 0pc;
+            margin-left: 15pc;
+            outline: none; /* Entfernt den Rahmen um das Video */
+            -webkit-appearance: none; /* Entfernt die Standardelemente in WebKit-basierten Browsern */
+            appearance: none; /* Entfernt die Standardelemente */
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px; /* Abstand zwischen Video und Button */
+        }
+
+        .button-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #74d3ff;
+            border-radius: 5px;
+        }
+
+        a {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2pc;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted>
+        <source src="Bildschirmaufnahme 2024-07-13 um 15.45.36.mov" type="video/mp4">
+        <!-- Fallback-Meldung, falls der Browser das Video nicht abspielen kann -->
+        Dein Browser unterstützt diese Seite nicht.
+    </video>
+    <div class="button-container">
+        <p>Bitte geben Sie uns Bescheid, ob Sie kommen können:</p>
+        <a type="button" href="https://docs.google.com/forms/d/e/1FAIpQLSfXHyolb2xuxqNxOWUYU6vUpV8SS-ZlP12rUQQFVjcUk4r0bw/viewform?usp=sf_link">zur Umfrage</a>
+    </div>
+
+    <script>
+        // Funktion, um nach unten zu scrollen
+        function scrollToBottom() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+
+        // Nach 10 Sekunden automatisch nach unten scrollen
+        setTimeout(scrollToBottom, 10000);
+    </script>
+</body>
+</html>
