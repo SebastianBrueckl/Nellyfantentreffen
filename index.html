@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +7,28 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            height: 150vh; /* Beispielhöhe für einen langen Inhalt */
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
         }
 
         video {
-            display: block;
-            width: 46pc;
-            height: auto;
-            margin-top: 0pc;
-            margin-left: 15pc;
-            outline: none; /* Entfernt den Rahmen um das Video */
-            -webkit-appearance: none; /* Entfernt die Standardelemente in WebKit-basierten Browsern */
-            appearance: none; /* Entfernt die Standardelemente */
+            flex: 1;
+            width: 50pc;
+            height: 100%;
+            object-fit: cover;
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+            margin-left: 12.5pc;
         }
 
         .button-container {
             text-align: center;
-            margin-top: 20px; /* Abstand zwischen Video und Button */
+            margin: 20px 0;
+            padding: 0 10px;
         }
 
         .button-container a {
@@ -37,26 +40,28 @@
             border-radius: 5px;
         }
 
-        a {
+        p {
             font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
         }
-        p{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 2pc;
+
+        @media (min-width: 768px) {
+            p {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
     <video autoplay loop muted>
         <source src="Bildschirmaufnahme 2024-07-13 um 15.45.36.mov" type="video/mp4">
-        <!-- Fallback-Meldung, falls der Browser das Video nicht abspielen kann -->
         Dein Browser unterstützt diese Seite nicht.
     </video>
     <div class="button-container">
         <p>Bitte geben Sie uns Bescheid, ob Sie kommen können:</p>
         <a type="button" href="https://docs.google.com/forms/d/e/1FAIpQLSfXHyolb2xuxqNxOWUYU6vUpV8SS-ZlP12rUQQFVjcUk4r0bw/viewform?usp=sf_link">zur Umfrage</a>
     </div>
-
+    <br><br><br><br><br><br><br><br><br><br><br><br>
     <script>
         // Funktion, um nach unten zu scrollen
         function scrollToBottom() {
