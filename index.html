@@ -12,23 +12,21 @@
             display: flex;
             flex-direction: column;
             height: 100vh;
+            overflow: hidden;
         }
 
         video {
-            flex: 1;
-            width: 60%;
-            height: 100%;
+            width: 100%;
+            height: auto;
             object-fit: cover;
             outline: none;
             -webkit-appearance: none;
             appearance: none;
-            margin-left: 20%;
         }
 
         .button-container {
             text-align: center;
-            margin: 20px 0;
-            padding: 0 10px;
+            padding: 10px;
         }
 
         .button-container a {
@@ -38,11 +36,12 @@
             color: white;
             background-color: #74d3ff;
             border-radius: 5px;
+            margin: 5px 0;
         }
 
         p {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
 
         @media (min-width: 768px) {
@@ -50,10 +49,16 @@
                 font-size: 2rem;
             }
         }
+
+        @media (max-width: 768px) {
+            .button-container {
+                margin-top: 10px;
+            }
+        }
     </style>
 </head>
 <body>
-    <video autoplay loop muted>
+    <video autoplay loop muted playsinline>
         <source src="Bildschirmaufnahme 2024-07-13 um 15.45.36.mov" type="video/mp4">
         Dein Browser unterstützt diese Seite nicht.
     </video>
@@ -65,7 +70,6 @@
         <p>Testen Sie die Handyversion:</p>
         <a href="https://sebastianbrueckl.github.io/Nelyfantentreffen-Einladung-Handy/">Handyversion hier öffnen</a>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
     <script>
         // Funktion, um nach unten zu scrollen
         function scrollToBottom() {
@@ -76,7 +80,7 @@
         }
 
         // Nach 10 Sekunden automatisch nach unten scrollen
-        setTimeout(scrollToBottom, 10000);
+        setTimeout(scrollToBottom, 11000);
     </script>
 </body>
 </html>
